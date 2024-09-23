@@ -1,0 +1,122 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Product Search",
+    "line": 1,
+    "id": "product-search",
+    "tags": [],
+    "uri": "searchProducts.feature",
+    "elements": [
+      {
+        "id": "product-search;search-bar-availability",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Search bar availability",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I visit the Automation Test Store homepage",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the search bar should be available at the top of the page",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "product-search;relevant-search-results",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Relevant search results",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I visit the Automation Test Store homepage",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I search for \"Total Moisture Facial Cream\"",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the search results should be relevant and include \"Total Moisture Facial Cream\"",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "product-search;product-preview-in-search-results",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Product preview in search results",
+        "tags": [
+          {
+            "name": "@focus",
+            "line": 14
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "I visit the Automation Test Store homepage",
+            "result": {
+              "status": "passed",
+              "duration": 3303000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I search for \"Total Moisture Facial Cream\"",
+            "result": {
+              "status": "passed",
+              "duration": 1752000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "the search results should show a preview of the product including the image, name, and price",
+            "result": {
+              "status": "passed",
+              "duration": 22000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

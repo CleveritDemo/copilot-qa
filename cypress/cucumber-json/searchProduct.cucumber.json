@@ -1,0 +1,122 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Search Product",
+    "line": 3,
+    "id": "search-product",
+    "tags": [],
+    "uri": "searchProduct.feature",
+    "elements": [
+      {
+        "id": "search-product;search-bar-availability",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Search bar availability",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I visit the Automation Test Store homepage",
+            "result": {
+              "status": "passed",
+              "duration": 2031000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the search bar should be available on all pages",
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-product;relevant-search-results",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Relevant search results",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I visit the Automation Test Store homepage",
+            "result": {
+              "status": "passed",
+              "duration": 838000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I search for \"Benefit Bella Bamba\"",
+            "result": {
+              "status": "passed",
+              "duration": 1610000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the search results should be relevant and show products matching the keyword",
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-product;search-results-preview",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Search results preview",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "I visit the Automation Test Store homepage",
+            "result": {
+              "status": "passed",
+              "duration": 1265000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I search for \"Benefit Bella Bamba\"",
+            "result": {
+              "status": "passed",
+              "duration": 1682000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "the search results should show a preview of the products including image, name, and price",
+            "result": {
+              "status": "passed",
+              "duration": 28000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

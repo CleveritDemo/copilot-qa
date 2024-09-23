@@ -1,0 +1,67 @@
+[
+  {
+    "description": "As a user\nI want to search for \"quality stream automatización\" on Google\nSo that I can verify the search results page title in both Spanish and English",
+    "keyword": "Feature",
+    "name": "Google Search Test",
+    "line": 2,
+    "id": "google-search-test",
+    "tags": [
+      {
+        "name": "@feature-tag",
+        "line": 1
+      }
+    ],
+    "uri": "testGoogle.feature",
+    "elements": [
+      {
+        "id": "google-search-test;search-for-\"quality-stream-automatización\"-on-google",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Search for \"quality stream automatización\" on Google",
+        "tags": [
+          {
+            "name": "@feature-tag",
+            "line": 1
+          },
+          {
+            "name": "@test01",
+            "line": 7
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I visit the Google homepage",
+            "result": {
+              "status": "passed",
+              "duration": 1200000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I search for \"Microsoft Copilot | IA de Microsoft\"",
+            "result": {
+              "status": "passed",
+              "duration": 1192000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "the page title should include \"Microsoft Copilot | IA de Microsoft\"",
+            "result": {
+              "status": "passed",
+              "duration": 1555000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,103 @@
+[
+  {
+    "description": "  As a user\n  I want to create a new user\n  So that I can use the application",
+    "keyword": "Feature",
+    "name": "Create User API",
+    "line": 1,
+    "id": "create-user-api",
+    "tags": [],
+    "uri": "ejemploBackend.feature",
+    "elements": [
+      {
+        "id": "create-user-api;create-a-new-user",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Create a new user",
+        "tags": [
+          {
+            "name": "@test01",
+            "line": 6
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I have the user details",
+            "result": {
+              "status": "passed",
+              "duration": 66000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I send a POST request to the API to create the user",
+            "result": {
+              "status": "passed",
+              "duration": 967000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the user should be created successfully",
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "create-user-api;retrieve-user-information",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Retrieve user information",
+        "tags": [
+          {
+            "name": "@test02",
+            "line": 12
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "there is a user with ID \"1\"",
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I send a GET request to the API to retrieve user information",
+            "result": {
+              "status": "passed",
+              "duration": 230000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "the user details should be returned successfully",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

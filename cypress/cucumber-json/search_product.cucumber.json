@@ -1,0 +1,162 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Search Products",
+    "line": 1,
+    "id": "search-products",
+    "tags": [],
+    "uri": "search_product.feature",
+    "elements": [
+      {
+        "id": "search-products;verify-search-bar-is-available-on-all-pages",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Verify search bar is available on all pages",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I navigate to the Automation Test Store homepage",
+            "result": {
+              "status": "passed",
+              "duration": 1888000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "the search bar should be available on all pages",
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-products;search-for-a-product-and-verify-relevant-results",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Search for a product and verify relevant results",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I navigate to the Automation Test Store homepage",
+            "result": {
+              "status": "passed",
+              "duration": 10446000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I search for the product titled \"Benefit Bella Bamba\"",
+            "result": {
+              "status": "passed",
+              "duration": 2093000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the search results should be relevant and show products matching the keyword \"Benefit Bella Bamba\"",
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-products;verify-product-preview-in-search-results",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Verify product preview in search results",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "I navigate to the Automation Test Store homepage",
+            "result": {
+              "status": "passed",
+              "duration": 1348000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I search for the product titled \"Benefit Bella Bamba\"",
+            "result": {
+              "status": "passed",
+              "duration": 1586000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "the search results should show a preview of the products including image, name, and price",
+            "result": {
+              "status": "passed",
+              "duration": 47000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-products;search-for-a-non-existent-product",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Search for a non-existent product",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 21,
+            "name": "I navigate to the Automation Test Store homepage",
+            "result": {
+              "status": "passed",
+              "duration": 2363000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I search for the product titled \"NonExistentProduct\"",
+            "result": {
+              "status": "passed",
+              "duration": 1022000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "the search results should indicate no products found with the message \"There is no product that matches the search criteria\"",
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

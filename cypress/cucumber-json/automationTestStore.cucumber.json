@@ -1,0 +1,86 @@
+[
+  {
+    "description": "As a user\nI want to search for a featured product on Automation Test Store\nSo that I can add it to the cart and verify it is included",
+    "keyword": "Feature",
+    "name": "Automation Test Store Shopping Cart Test",
+    "line": 2,
+    "id": "automation-test-store-shopping-cart-test",
+    "tags": [
+      {
+        "name": "@feature-tag",
+        "line": 1
+      }
+    ],
+    "uri": "automationTestStore.feature",
+    "elements": [
+      {
+        "id": "automation-test-store-shopping-cart-test;add-\"benefit-bella-bamba\"-to-the-cart",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Add \"Benefit Bella Bamba\" to the cart",
+        "tags": [
+          {
+            "name": "@feature-tag",
+            "line": 1
+          },
+          {
+            "name": "@test01",
+            "line": 7
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I visit the Automation Test Store homepage",
+            "result": {
+              "status": "passed",
+              "duration": 11784000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I search for the featured product \"Benefit Bella Bamba\"",
+            "result": {
+              "status": "passed",
+              "duration": 1804000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I select the product",
+            "result": {
+              "status": "failed",
+              "duration": 10013000000,
+              "error_message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.productcart`, but never found it.\n    at AutomationTestStorePage.selectProduct (cypress/page_objects/automationTestStorePage.js:11:11)\n    at Context.eval (cypress/e2e/step_definitions/automationTestStoreSteps.js:15:28)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I add the product to the cart",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "the product \"Benefit Bella Bamba\" should be in the cart",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

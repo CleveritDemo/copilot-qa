@@ -1,0 +1,382 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Practice Software Testing",
+    "line": 1,
+    "id": "practice-software-testing",
+    "tags": [],
+    "uri": "practice_software_testing.feature",
+    "elements": [
+      {
+        "id": "practice-software-testing;verificar-la-selección-de-un-producto",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Verificar la selección de un producto",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I navigate to the Practice Software Testing homepage",
+            "result": {
+              "status": "passed",
+              "duration": 400000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I select a product",
+            "result": {
+              "status": "passed",
+              "duration": 1102000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the selected product should be shown on the product details page",
+            "result": {
+              "status": "passed",
+              "duration": 797000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "practice-software-testing;verificar-la-búsqueda-en-el-search",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Verificar la búsqueda en el search",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I navigate to the Practice Software Testing homepage",
+            "result": {
+              "status": "passed",
+              "duration": 218000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I enter a search term in the search bar \"Claw Hammer with Shock Reduction Grip\"",
+            "result": {
+              "status": "passed",
+              "duration": 584000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I click the search button",
+            "result": {
+              "status": "passed",
+              "duration": 92000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the results should show products related to the search term \"Claw Hammer with Shock Reduction Grip\"",
+            "result": {
+              "status": "passed",
+              "duration": 138000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "practice-software-testing;verificar-el-uso-de-filtros",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Verificar el uso de filtros",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "I navigate to the Practice Software Testing homepage",
+            "result": {
+              "status": "passed",
+              "duration": 227000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I apply search filters \" Hand Saw \"",
+            "result": {
+              "status": "passed",
+              "duration": 873000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "the listed products should update to reflect the applied filters",
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "practice-software-testing;verificar-la-adición-de-un-producto-al-carrito",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Verificar la adición de un producto al carrito",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "I navigate to the Practice Software Testing homepage",
+            "result": {
+              "status": "passed",
+              "duration": 221000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "I select a product",
+            "result": {
+              "status": "passed",
+              "duration": 906000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I click 'Add to Cart'",
+            "result": {
+              "status": "passed",
+              "duration": 879000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "the product should be added to the cart and the cart icon should update",
+            "result": {
+              "status": "passed",
+              "duration": 779000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "practice-software-testing;verificar-la-eliminación-de-un-producto-del-carrito",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "Verificar la eliminación de un producto del carrito",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 29,
+            "name": "I navigate to the Practice Software Testing homepage",
+            "result": {
+              "status": "passed",
+              "duration": 349000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "I select a product",
+            "result": {
+              "status": "passed",
+              "duration": 884000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "I click 'Add to Cart'",
+            "result": {
+              "status": "passed",
+              "duration": 857000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "I go to the shopping cart",
+            "result": {
+              "status": "passed",
+              "duration": 855000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 33,
+            "name": "I remove the product from the cart",
+            "result": {
+              "status": "passed",
+              "duration": 885000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "the product should be removed from the cart and the cart icon should update",
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "practice-software-testing;verificar-la-cantidad-de-productos-en-el-carrito",
+        "keyword": "Scenario",
+        "line": 36,
+        "name": "Verificar la cantidad de productos en el carrito",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 37,
+            "name": "I navigate to the Practice Software Testing homepage",
+            "result": {
+              "status": "passed",
+              "duration": 1095000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "I select a product",
+            "result": {
+              "status": "passed",
+              "duration": 892000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 39,
+            "name": "I add multiple products to the cart",
+            "result": {
+              "status": "passed",
+              "duration": 1016000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "I go to the shopping cart",
+            "result": {
+              "status": "passed",
+              "duration": 824000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "the total number of products in the cart should reflect the number of items added",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "practice-software-testing;verificar-la-funcionalidad-de-búsqueda-con-filtros-aplicados",
+        "keyword": "Scenario",
+        "line": 43,
+        "name": "Verificar la funcionalidad de búsqueda con filtros aplicados",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 44,
+            "name": "I navigate to the Practice Software Testing homepage",
+            "result": {
+              "status": "passed",
+              "duration": 1526000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 45,
+            "name": "I apply search filters \"Measures\"",
+            "result": {
+              "status": "passed",
+              "duration": 954000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "I enter a search term in the search bar \"Measure\"",
+            "result": {
+              "status": "passed",
+              "duration": 227000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 47,
+            "name": "I click the search button",
+            "result": {
+              "status": "passed",
+              "duration": 91000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 48,
+            "name": "the results should show products that meet both the search term and applied filters \"Measure\"",
+            "result": {
+              "status": "passed",
+              "duration": 534000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
