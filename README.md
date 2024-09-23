@@ -34,7 +34,7 @@ está orientada a testers que buscan optimizar los tiempos al momento de tener q
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone https://github.com/alletxis-clever/githubcopilot-qa.git
+      git clone https://github.com/CleveritDemo/copilot-qa.git
    ```
 2. **Cambiar a la branch/rama :**
    ```bash
