@@ -42,7 +42,7 @@ está orientada a testers que buscan optimizar los tiempos al momento de tener q
    ```
 3. **Crear nuestra propia rama de trabajo:**
    ```bash
-   Ejemplo: git checkout -b copilot/feature/testcases_<iniciales de nolbre y apellido>
+   Ejemplo: git checkout -b copilot/feature/testcases_<iniciales de nombre y apellido>
    ``` 
 4. **Instalar las dependencias:**
    ```bash
