@@ -1,0 +1,22 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/reports/
+cypress/logs/
+
+# macOS
+.DS_Store
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+
+# Logs
+logs/
+*.log
