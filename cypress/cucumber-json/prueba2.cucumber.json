@@ -1,0 +1,160 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Search and Add Product to Cart",
+    "line": 1,
+    "id": "search-and-add-product-to-cart",
+    "tags": [],
+    "uri": "prueba2.feature",
+    "elements": [
+      {
+        "id": "search-and-add-product-to-cart;search-and-add-product-to-cart",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Search and add product to cart",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I visit the Automation Test Store homepage",
+            "result": {
+              "status": "passed",
+              "duration": 2900000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I search for \"Benefit Bella Bamba\"",
+            "result": {
+              "status": "passed",
+              "duration": 1669000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I add the product to the shopping cart",
+            "result": {
+              "status": "failed",
+              "duration": 7000000,
+              "error_message": "TypeError: _SearchResultsPage.default.addToCart is not a function\n    at Context.eval (cypress/e2e/step_definitions/searchAndAddToCartSteps.js:15:20)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)\nFrom previous event:\n    at Context.thenFn (https://automationteststore.com/__cypress/runner/cypress_runner.js:139305:63)\n    at Context.then (https://automationteststore.com/__cypress/runner/cypress_runner.js:139585:21)\n    at wrapped (https://automationteststore.com/__cypress/runner/cypress_runner.js:156187:19)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:154976:15)\nFrom previous event:\n    at CommandQueue.runCommand (https://automationteststore.com/__cypress/runner/cypress_runner.js:154942:8)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:155140:19)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:155162:16)\nFrom previous event:\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:155140:39)\nFrom previous event:\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:170021:77)\nFrom previous event:\n    at CommandQueue.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:170016:21)\n    at CommandQueue.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:155212:15)\n    at $Cy.runQueue (https://automationteststore.com/__cypress/runner/cypress_runner.js:156163:14)\n    at cy.<computed> [as then] (https://automationteststore.com/__cypress/runner/cypress_runner.js:156257:12)\n    at runnable.fn (https://automationteststore.com/__cypress/runner/cypress_runner.js:156453:19)\n    at callFn (https://automationteststore.com/__cypress/runner/cypress_runner.js:107972:21)\n    at ../driver/node_modules/mocha/lib/runnable.js.Runnable.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:107959:7)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:164082:30)\nFrom previous event:\n    at Object.onRunnableRun (https://automationteststore.com/__cypress/runner/cypress_runner.js:164067:53)\n    at $Cypress.action (https://automationteststore.com/__cypress/runner/cypress_runner.js:152463:28)\n    at Runnable.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:161778:13)\n    at ../driver/node_modules/mocha/lib/runner.js.Runner.runTest (https://automationteststore.com/__cypress/runner/cypress_runner.js:108631:10)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:108757:12)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:108540:14)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:108550:7)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:108452:14)\n    at Hook.<anonymous> (https://automationteststore.com/__cypress/runner/cypress_runner.js:108513:7)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:163973:24)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:164002:13)\nFrom previous event:\n    at onNext (https://automationteststore.com/__cypress/runner/cypress_runner.js:163999:59)\n    at done (https://automationteststore.com/__cypress/runner/cypress_runner.js:107912:5)\n    at callFn (https://automationteststore.com/__cypress/runner/cypress_runner.js:107995:7)\n    at ../driver/node_modules/mocha/lib/runnable.js.Runnable.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:107959:7)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:164082:30)\nFrom previous event:\n    at Object.onRunnableRun (https://automationteststore.com/__cypress/runner/cypress_runner.js:164067:53)\n    at $Cypress.action (https://automationteststore.com/__cypress/runner/cypress_runner.js:152463:28)\n    at Runnable.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:161778:13)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:108474:10)\n    at Hook.<anonymous> (https://automationteststore.com/__cypress/runner/cypress_runner.js:108513:7)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:163973:24)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:164002:13)\nFrom previous event:\n    at onNext (https://automationteststore.com/__cypress/runner/cypress_runner.js:163999:59)\n    at done (https://automationteststore.com/__cypress/runner/cypress_runner.js:107912:5)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:107977:11)\nFrom previous event:\n    at callFn (https://automationteststore.com/__cypress/runner/cypress_runner.js:107975:14)\n    at ../driver/node_modules/mocha/lib/runnable.js.Runnable.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:107959:7)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:164082:30)\nFrom previous event:\n    at Object.onRunnableRun (https://automationteststore.com/__cypress/runner/cypress_runner.js:164067:53)\n    at $Cypress.action (https://automationteststore.com/__cypress/runner/cypress_runner.js:152463:28)\n    at Runnable.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:161778:13)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:108474:10)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:108518:5)\n    at timeslice (https://automationteststore.com/__cypress/runner/cypress_runner.js:102444:27)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the shopping cart should include the product \"Benefit Bella Bamba\"",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-and-add-product-to-cart;search-and-add-another-product-to-cart-and-continue-shopping",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Search and add another product to cart and continue shopping",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I visit the Automation Test Store homepage",
+            "result": {
+              "status": "passed",
+              "duration": 1376000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I search for \"Total Moisture Facial Cream\"",
+            "result": {
+              "status": "passed",
+              "duration": 1721000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I add the product to the shopping cart",
+            "result": {
+              "status": "failed",
+              "error_message": "TypeError: _SearchResultsPage.default.addToCart is not a function\n    at Context.eval (cypress/e2e/step_definitions/searchAndAddToCartSteps.js:15:20)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)\nFrom previous event:\n    at Context.thenFn (https://automationteststore.com/__cypress/runner/cypress_runner.js:139305:63)\n    at Context.then (https://automationteststore.com/__cypress/runner/cypress_runner.js:139585:21)\n    at wrapped (https://automationteststore.com/__cypress/runner/cypress_runner.js:156187:19)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:154976:15)\nFrom previous event:\n    at CommandQueue.runCommand (https://automationteststore.com/__cypress/runner/cypress_runner.js:154942:8)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:155140:19)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:155162:16)\nFrom previous event:\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:155140:39)\nFrom previous event:\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:170021:77)\nFrom previous event:\n    at CommandQueue.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:170016:21)\n    at CommandQueue.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:155212:15)\n    at $Cy.runQueue (https://automationteststore.com/__cypress/runner/cypress_runner.js:156163:14)\n    at cy.<computed> [as then] (https://automationteststore.com/__cypress/runner/cypress_runner.js:156257:12)\n    at runnable.fn (https://automationteststore.com/__cypress/runner/cypress_runner.js:156453:19)\n    at callFn (https://automationteststore.com/__cypress/runner/cypress_runner.js:107972:21)\n    at ../driver/node_modules/mocha/lib/runnable.js.Runnable.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:107959:7)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:164082:30)\nFrom previous event:\n    at Object.onRunnableRun (https://automationteststore.com/__cypress/runner/cypress_runner.js:164067:53)\n    at $Cypress.action (https://automationteststore.com/__cypress/runner/cypress_runner.js:152463:28)\n    at Runnable.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:161778:13)\n    at ../driver/node_modules/mocha/lib/runner.js.Runner.runTest (https://automationteststore.com/__cypress/runner/cypress_runner.js:108631:10)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:108757:12)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:108540:14)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:108550:7)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:108452:14)\n    at Hook.<anonymous> (https://automationteststore.com/__cypress/runner/cypress_runner.js:108513:7)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:163973:24)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:164002:13)\nFrom previous event:\n    at onNext (https://automationteststore.com/__cypress/runner/cypress_runner.js:163999:59)\n    at done (https://automationteststore.com/__cypress/runner/cypress_runner.js:107912:5)\n    at callFn (https://automationteststore.com/__cypress/runner/cypress_runner.js:107995:7)\n    at ../driver/node_modules/mocha/lib/runnable.js.Runnable.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:107959:7)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:164082:30)\nFrom previous event:\n    at Object.onRunnableRun (https://automationteststore.com/__cypress/runner/cypress_runner.js:164067:53)\n    at $Cypress.action (https://automationteststore.com/__cypress/runner/cypress_runner.js:152463:28)\n    at Runnable.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:161778:13)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:108474:10)\n    at Hook.<anonymous> (https://automationteststore.com/__cypress/runner/cypress_runner.js:108513:7)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:163973:24)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:164002:13)\nFrom previous event:\n    at onNext (https://automationteststore.com/__cypress/runner/cypress_runner.js:163999:59)\n    at done (https://automationteststore.com/__cypress/runner/cypress_runner.js:107912:5)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:107977:11)\nFrom previous event:\n    at callFn (https://automationteststore.com/__cypress/runner/cypress_runner.js:107975:14)\n    at ../driver/node_modules/mocha/lib/runnable.js.Runnable.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:107959:7)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:164082:30)\nFrom previous event:\n    at Object.onRunnableRun (https://automationteststore.com/__cypress/runner/cypress_runner.js:164067:53)\n    at $Cypress.action (https://automationteststore.com/__cypress/runner/cypress_runner.js:152463:28)\n    at Runnable.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:161778:13)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:108474:10)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:108518:5)\n    at timeslice (https://automationteststore.com/__cypress/runner/cypress_runner.js:102444:27)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "the shopping cart should include the product \"Total Moisture Facial Cream\"",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I continue shopping",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-and-add-product-to-cart;search-for-a-product-that-is-out-of-stock",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "Search for a product that is out of stock",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "I visit the Automation Test Store homepage",
+            "result": {
+              "status": "passed",
+              "duration": 1228000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I search for \"Acqua Di Gio Pour Homme\"",
+            "result": {
+              "status": "passed",
+              "duration": 1785000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "the product should be out of stock",
+            "result": {
+              "status": "failed",
+              "error_message": "TypeError: _SearchResultsPage.default.validateOutOfStock is not a function\n    at Context.eval (cypress/e2e/step_definitions/searchAndAddToCartSteps.js:27:20)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)\nFrom previous event:\n    at Context.thenFn (https://automationteststore.com/__cypress/runner/cypress_runner.js:139305:63)\n    at Context.then (https://automationteststore.com/__cypress/runner/cypress_runner.js:139585:21)\n    at wrapped (https://automationteststore.com/__cypress/runner/cypress_runner.js:156187:19)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:154976:15)\nFrom previous event:\n    at CommandQueue.runCommand (https://automationteststore.com/__cypress/runner/cypress_runner.js:154942:8)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:155140:19)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:155162:16)\nFrom previous event:\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:155140:39)\nFrom previous event:\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:170021:77)\nFrom previous event:\n    at CommandQueue.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:170016:21)\n    at CommandQueue.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:155212:15)\n    at $Cy.runQueue (https://automationteststore.com/__cypress/runner/cypress_runner.js:156163:14)\n    at cy.<computed> [as then] (https://automationteststore.com/__cypress/runner/cypress_runner.js:156257:12)\n    at runnable.fn (https://automationteststore.com/__cypress/runner/cypress_runner.js:156453:19)\n    at callFn (https://automationteststore.com/__cypress/runner/cypress_runner.js:107972:21)\n    at ../driver/node_modules/mocha/lib/runnable.js.Runnable.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:107959:7)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:164082:30)\nFrom previous event:\n    at Object.onRunnableRun (https://automationteststore.com/__cypress/runner/cypress_runner.js:164067:53)\n    at $Cypress.action (https://automationteststore.com/__cypress/runner/cypress_runner.js:152463:28)\n    at Runnable.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:161778:13)\n    at ../driver/node_modules/mocha/lib/runner.js.Runner.runTest (https://automationteststore.com/__cypress/runner/cypress_runner.js:108631:10)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:108757:12)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:108540:14)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:108550:7)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:108452:14)\n    at Hook.<anonymous> (https://automationteststore.com/__cypress/runner/cypress_runner.js:108513:7)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:163973:24)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:164002:13)\nFrom previous event:\n    at onNext (https://automationteststore.com/__cypress/runner/cypress_runner.js:163999:59)\n    at done (https://automationteststore.com/__cypress/runner/cypress_runner.js:107912:5)\n    at callFn (https://automationteststore.com/__cypress/runner/cypress_runner.js:107995:7)\n    at ../driver/node_modules/mocha/lib/runnable.js.Runnable.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:107959:7)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:164082:30)\nFrom previous event:\n    at Object.onRunnableRun (https://automationteststore.com/__cypress/runner/cypress_runner.js:164067:53)\n    at $Cypress.action (https://automationteststore.com/__cypress/runner/cypress_runner.js:152463:28)\n    at Runnable.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:161778:13)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:108474:10)\n    at Hook.<anonymous> (https://automationteststore.com/__cypress/runner/cypress_runner.js:108513:7)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:163973:24)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:164002:13)\nFrom previous event:\n    at onNext (https://automationteststore.com/__cypress/runner/cypress_runner.js:163999:59)\n    at done (https://automationteststore.com/__cypress/runner/cypress_runner.js:107912:5)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:107977:11)\nFrom previous event:\n    at callFn (https://automationteststore.com/__cypress/runner/cypress_runner.js:107975:14)\n    at ../driver/node_modules/mocha/lib/runnable.js.Runnable.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:107959:7)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:164082:30)\nFrom previous event:\n    at Object.onRunnableRun (https://automationteststore.com/__cypress/runner/cypress_runner.js:164067:53)\n    at $Cypress.action (https://automationteststore.com/__cypress/runner/cypress_runner.js:152463:28)\n    at Runnable.run (https://automationteststore.com/__cypress/runner/cypress_runner.js:161778:13)\n    at next (https://automationteststore.com/__cypress/runner/cypress_runner.js:108474:10)\n    at <unknown> (https://automationteststore.com/__cypress/runner/cypress_runner.js:108518:5)\n    at timeslice (https://automationteststore.com/__cypress/runner/cypress_runner.js:102444:27)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,133 @@
+[
+  {
+    "description": "As a user\nI want to verify the functionality of the CleverIT website\nSo that I can ensure it works correctly",
+    "keyword": "Feature",
+    "name": "CleverIT Page Test",
+    "line": 2,
+    "id": "cleverit-page-test",
+    "tags": [
+      {
+        "name": "@feature-tag",
+        "line": 1
+      }
+    ],
+    "uri": "ejemploFronted.feature",
+    "elements": [
+      {
+        "id": "cleverit-page-test;homepage-should-display-correctly",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Homepage should display correctly",
+        "tags": [
+          {
+            "name": "@feature-tag",
+            "line": 1
+          },
+          {
+            "name": "@test01",
+            "line": 7
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I visit the CleverIT homepage",
+            "result": {
+              "status": "passed",
+              "duration": 7792000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the homepage title should include \"El talento excepcional se une a nuestra tecnología disruptiva\"",
+            "result": {
+              "status": "failed",
+              "duration": 10213000000,
+              "error_message": "AssertionError: Timed out retrying after 10000ms: expected 'YouTube' to include 'El talento excepcional se une a nuestra tecnología disruptiva'\n    at Function.validateTittle (cypress/page_objects/ejemploFrontpage.page.js:28:15)\n    at Context.eval (cypress/e2e/step_definitions/frontStepDefinitions.js:16:14)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "the homepage should contain the text \"Home\"",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "there should be a link to the Services page",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cleverit-page-test;navigate-to-services-page",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Navigate to Services page",
+        "tags": [
+          {
+            "name": "@feature-tag",
+            "line": 1
+          },
+          {
+            "name": "@test02",
+            "line": 14
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "I visit the CleverIT homepage",
+            "result": {
+              "status": "passed",
+              "duration": 4104000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I click on the link to the Services page",
+            "result": {
+              "status": "failed",
+              "error_message": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Servicios' but never did.\n    at Function.clickPage (cypress/page_objects/ejemploFrontpage.page.js:42:7)\n    at Context.eval (cypress/e2e/step_definitions/frontStepDefinitions.js:29:13)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "I should be redirected to the Services page",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "the Services page title should include \"Servicios\"",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

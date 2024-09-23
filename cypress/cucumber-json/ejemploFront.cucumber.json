@@ -1,0 +1,52 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "CleverIT Homepage Navigation",
+    "line": 1,
+    "id": "cleverit-homepage-navigation",
+    "tags": [],
+    "uri": "ejemploFront.feature",
+    "elements": [
+      {
+        "id": "cleverit-homepage-navigation;visit-cleverit-homepage-and-verify-elements",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Visit CleverIT homepage and verify elements",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I visit the CleverIT homepage",
+            "result": {
+              "status": "passed",
+              "duration": 4028000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "the homepage title should include \"El talento excepcional se une a nuestra tecnología disruptiva\"",
+            "result": {
+              "status": "passed",
+              "duration": 46000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "there should be a link to the Services page",
+            "result": {
+              "status": "passed",
+              "duration": 130000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

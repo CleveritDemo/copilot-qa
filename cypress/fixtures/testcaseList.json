@@ -1,0 +1,39 @@
+{
+
+    "Caso1": {
+      "Número": "1",
+      "Nombre": "Búsqueda de Producto por Nombre",
+      "Pasos": "1. Acceder a la página de inicio de Automation Test Store.\n2. Ingresar el nombre del producto en la barra de búsqueda.\n3. Hacer clic en el botón de búsqueda.\n4. Verificar que el producto aparezca en los resultados.",
+      "Resultado Esperado": "El producto debe aparecer en los resultados de búsqueda.",
+      "Automatizado": "No"
+    },
+    "Caso2": {
+      "Número": "2",
+      "Nombre": "Agregar Producto al Carrito",
+      "Pasos": "1. Acceder a la página del producto desde los resultados de búsqueda.\n2. Hacer clic en 'Agregar al Carrito'.\n3. Verificar que el producto se haya añadido al carrito con un mensaje de confirmación.",
+      "Resultado Esperado": "El producto debe añadirse correctamente al carrito con una notificación de éxito.",
+      "Automatizado": "No"
+    },
+    "Caso3": {
+      "Número": "3",
+      "Nombre": "Verificación del Carrito de Compras",
+      "Pasos": "1. Acceder al carrito de compras desde la esquina superior derecha de la página.\n2. Verificar que los productos añadidos anteriormente estén presentes.\n3. Confirmar que el total de la compra sea correcto.",
+      "Resultado Esperado": "El carrito de compras debe mostrar los productos añadidos y el total debe ser correcto.",
+      "Automatizado": "No"
+    },
+    "Caso4": {
+      "Número": "4",
+      "Nombre": "Navegación a la Página de Contacto",
+      "Pasos": "1. Desde cualquier página, desplazarse hacia el pie de página.\n2. Hacer clic en el enlace 'Contact Us'.\n3. Verificar que se abra la página de contacto.",
+      "Resultado Esperado": "La página de contacto debe abrirse correctamente.",
+      "Automatizado": "No"
+    },
+    "Caso5": {
+      "Número": "5",
+      "Nombre": "Registro de Nueva Cuenta",
+      "Pasos": "1. En la página de inicio, hacer clic en 'Login or register'.\n2. Seleccionar 'Register'.\n3. Completar los campos obligatorios.\n4. Hacer clic en 'Continue'.\n5. Verificar que la cuenta se haya creado exitosamente.",
+      "Resultado Esperado": "La cuenta debe ser creada exitosamente y el usuario debe ser redirigido a la página de confirmación.",
+      "Automatizado": "No"
+    }
+
+}

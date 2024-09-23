@@ -1,0 +1,177 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Automation Test Store",
+    "line": 1,
+    "id": "automation-test-store",
+    "tags": [],
+    "uri": "automation_test_store.feature",
+    "elements": [
+      {
+        "id": "automation-test-store;add-benefit-bella-bamba-to-the-shopping-cart",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Add Benefit Bella Bamba to the shopping cart",
+        "tags": [
+          {
+            "name": "@test_01",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I navigate to the Automation Test Store page",
+            "result": {
+              "status": "passed",
+              "duration": 6915000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I search for the product titled \"Benefit Bella Bamba\"",
+            "result": {
+              "status": "passed",
+              "duration": 2039000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I add the product to the shopping cart",
+            "result": {
+              "status": "passed",
+              "duration": 1450000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "the product should be included in the shopping cart \"Benefit Bella Bamba\"",
+            "result": {
+              "status": "passed",
+              "duration": 20000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "automation-test-store;add-total-moisture-facial-cream-to-the-shopping-cart",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Add Total Moisture Facial Cream to the shopping cart",
+        "tags": [
+          {
+            "name": "@test_02",
+            "line": 13
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "I navigate to the Automation Test Store page",
+            "result": {
+              "status": "passed",
+              "duration": 1443000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I search for the product titled \"Total Moisture Facial Cream\"",
+            "result": {
+              "status": "passed",
+              "duration": 2288000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I add the product to the shopping cart",
+            "result": {
+              "status": "passed",
+              "duration": 1577000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "the product should be included in the shopping cart \"Total Moisture Facial Cream\"",
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I continue shopping",
+            "result": {
+              "status": "passed",
+              "duration": 1129000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "automation-test-store;validate-out-of-stock-product",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "Validate out of stock product",
+        "tags": [
+          {
+            "name": "@test_03",
+            "line": 24
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 26,
+            "name": "I navigate to the Automation Test Store page",
+            "result": {
+              "status": "passed",
+              "duration": 1299000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "I search for the product titled \"Acqua Di Gio Pour Homme\"",
+            "result": {
+              "status": "passed",
+              "duration": 2498000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "the product should be out of stock",
+            "result": {
+              "status": "passed",
+              "duration": 14000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

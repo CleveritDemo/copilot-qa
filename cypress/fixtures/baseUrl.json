@@ -1,0 +1,13 @@
+{
+  "amb": {
+     "qa": {
+       "baseUrl": "https://www.google.com",
+       "baseUrlBack": "https://your-api-url.com/users"
+
+     }
+  },
+  "env": {
+    "global_timeout": 100000,
+    "environment": "LOCAL"
+  }
+}

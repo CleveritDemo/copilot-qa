@@ -1,0 +1,50 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Google Search",
+    "line": 1,
+    "id": "google-search",
+    "tags": [],
+    "uri": "prueba.feature",
+    "elements": [
+      {
+        "id": "google-search;search-for-\"microsoft-copilot-|-ia-de-microsoft\"",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Search for \"Microsoft Copilot | IA de Microsoft\"",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open Google page",
+            "result": {
+              "status": "undefined",
+              "duration": 52000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I search for \"Microsoft Copilot | IA de Microsoft\"",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the page title should contain \"Microsoft Copilot | IA de Microsoft\"",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+Historia de Usuario 1: Búsqueda de Productos
+Como un usuario de Automation Test Store,
+quiero poder buscar productos específicos utilizando la barra de búsqueda,
+para encontrar rápidamente los artículos que me interesan sin tener que navegar por varias categorías.
+
+Criterios de Aceptación:
+La barra de búsqueda debe estar disponible en la parte superior de todas las páginas del sitio.
+Los resultados de búsqueda deben ser relevantes y mostrar productos que coincidan con las palabras clave ingresadas.
+Los usuarios deben poder ver una vista previa de los productos en los resultados de búsqueda, incluyendo la imagen, el nombre y el precio.

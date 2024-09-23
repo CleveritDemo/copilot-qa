@@ -1,0 +1,49 @@
+{
+  "name": "cypress-cucumber-template",
+  "version": "1.0.1",
+  "description": "Template Cucumber Cypress",
+  "main": "index.js",
+  "env": {
+    "global_timeout": 40000
+  },
+  "scripts": {
+    "cypress:open": "cypress open",
+    "test": "unset ELECTRON_RUN_AS_NODE && cypress run --spec \"**/*.feature\" --browser chrome"
+  },
+  "dependencies": {
+    "cucumber-html-reporter": "5.5.0",
+    "cypress-cucumber-preprocessor": "4.3.1",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-plugin-tab": "1.0.5",
+    "cypress-xpath": "1.6.2",
+    "docx": "^8.5.0",
+    "fs": "0.0.2",
+    "fs-extra": "10.1.0",
+    "jsonschema": "1.4.1",
+    "mocha": "10.0.0",
+    "mochawesome": "7.1.3",
+    "mochawesome-merge": "4.2.1",
+    "multiple-cucumber-html-reporter": "1.20.0",
+    "request": "^2.88.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "integrationFolder": "cypress/e2e/specs/",
+    "step_definitions": "cypress/e2e/step_definitions/",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "cucumber-html-reporter": "^5.5.0",
+    "cypress": "^12.17.4",
+    "cypress-cucumber-attach-screenshots-to-failed-steps": "^1.0.0",
+    "cypress-localstorage-commands": "^1.7.0",
+    "cypress-xpath": "^1.6.2",
+    "esbuild": "^0.20.1"
+  }
+}
