@@ -182,7 +182,7 @@ Para crear un test en Cypress que cumpla con los requisitos mencionados, sigue e
  ```bash
 Feature: Automation Test Store
 
-  Scenario: Add Benefit Bella Bamba to the shopping cart
+  Scenario: Add Tropiques Minerale Loose Bronzer to the shopping cart
     Given I navigate to the Automation Test Store page
     When I search for the product titled "Tropiques Minerale Loose Bronzer"
     And I add the product to the shopping cart
@@ -265,7 +265,7 @@ Con este ejercicio vamos a crear 2 escenarios de prueba nuevamente utilizando nu
 Feature: Automation Test Store
 
   @test_01
-  Scenario Outline: Add Benefit Bella Bamba to the shopping cart
+  Scenario Outline: Add Tropiques Minerale Loose Bronzer to the shopping cart
     Given I navigate to the Automation Test Store page
     When I search for the product titled "<productTitle>"
     And I add the product to the shopping cart
