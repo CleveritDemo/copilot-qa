@@ -172,7 +172,7 @@ Otro aspecto importante a destacar en este ejercicio, es la forma en la que inte
 ### Ejemplo de prompt 3: Uso de commands de Github Copilot: ***@workspace***
 En este ejercicio vamos a crear un test utilizando el comando de github Copilot `@workspace` para que pueda tener el contexto de todo el proyecto, de esta forma vamos a obtener una respuesta más acertada.
  ```bash
-@workspace Teniendo en cuenta la estructura del framework, crear un test que: 1 Que navegue a la página de "https://automationteststore.com/", 2 Que realice una búsqueda del producto título “Benefit Bella Bamba”, 3 Que lo agregue al carrito de compras, 4 Que realice una validación que está incluido en el carrito de compras el producto   ```
+@workspace Teniendo en cuenta la estructura del framework, crear un test que: 1 Que navegue a la página de "https://automationteststore.com/", 2 Que realice una búsqueda del producto título “Tropiques Minerale Loose Bronzer”, 3 Que lo agregue al carrito de compras, 4 Que realice una validación que está incluido en el carrito de compras el producto   ```
  ```
 - ###  Respuesta de Copilot:
 Para crear un test en Cypress que cumpla con los requisitos mencionados, sigue estos pasos:
@@ -182,9 +182,9 @@ Para crear un test en Cypress que cumpla con los requisitos mencionados, sigue e
  ```bash
 Feature: Automation Test Store
 
-  Scenario: Add Benefit Bella Bamba to the shopping cart
+  Scenario: Add Tropiques Minerale Loose Bronzer to the shopping cart
     Given I navigate to the Automation Test Store page
-    When I search for the product titled "Benefit Bella Bamba"
+    When I search for the product titled "Tropiques Minerale Loose Bronzer"
     And I add the product to the shopping cart
     Then the product should be included in the shopping cart
    ```
@@ -230,7 +230,7 @@ class AutomationTestStorePage {
   }
 
   verifyProductInCart() {
-    cy.get('.cart_total').should('contain', 'Benefit Bella Bamba');
+    cy.get('.cart_total').should('contain', 'Tropiques Minerale Loose Bronzer');
   }
 }
 
@@ -265,7 +265,7 @@ Con este ejercicio vamos a crear 2 escenarios de prueba nuevamente utilizando nu
 Feature: Automation Test Store
 
   @test_01
-  Scenario Outline: Add Benefit Bella Bamba to the shopping cart
+  Scenario Outline: Add Tropiques Minerale Loose Bronzer to the shopping cart
     Given I navigate to the Automation Test Store page
     When I search for the product titled "<productTitle>"
     And I add the product to the shopping cart
@@ -404,8 +404,8 @@ Feature: Search Products
     When I search for the product titled "<productTitle>"
     Then the search results should be relevant and show products matching the keyword "<productTitle>"
     Examples:
-      | productTitle        |
-      | Benefit Bella Bamba |
+      | productTitle                     |
+      | Tropiques Minerale Loose Bronzer |
 
   Scenario: Verify product preview in search results
     Given I navigate to the Automation Test Store homepage
