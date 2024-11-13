@@ -1,7 +1,7 @@
 Feature: Automation Test Store
 
   @test_01
-  Scenario Outline: Add Benefit Tropiques Minerale Loose Bronzer to the shopping cart
+  Scenario Outline: Add Tropiques Minerale Loose Bronzer to the shopping cart
     Given I navigate to the Automation Test Store page
     When I search for the product titled "<productTitle>"
     And I add the product to the shopping cart
