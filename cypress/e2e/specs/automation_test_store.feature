@@ -1,14 +1,14 @@
 Feature: Automation Test Store
 
   @test_01
-  Scenario Outline: Add Benefit Bella Bamba to the shopping cart
+  Scenario Outline: Add Benefit Tropiques Minerale Loose Bronzer to the shopping cart
     Given I navigate to the Automation Test Store page
     When I search for the product titled "<productTitle>"
     And I add the product to the shopping cart
     Then the product should be included in the shopping cart "<productTitle>"
     Examples:
-    | productTitle        |
-    | Benefit Bella Bamba |
+    | productTitle                    |
+    | Tropiques Minerale Loose Bronzer|
 
    @test_02
    Scenario Outline: Add Total Moisture Facial Cream to the shopping cart
