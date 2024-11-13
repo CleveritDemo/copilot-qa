@@ -9,12 +9,12 @@ Feature: Search Products
     When I search for the product titled "<productTitle>"
     Then the search results should be relevant and show products matching the keyword "<productTitle>"
     Examples:
-      | productTitle        |
-      | Benefit Bella Bamba |
+      | productTitle                    |
+      |Tropiques Minerale Loose Bronzer |
 
   Scenario: Verify product preview in search results
     Given I navigate to the Automation Test Store homepage
-    When I search for the product titled "Benefit Bella Bamba"
+    When I search for the product titled "Tropiques Minerale Loose Bronzer"
     Then the search results should show a preview of the products including image, name, and price
 
   Scenario: Search for a non-existent product
