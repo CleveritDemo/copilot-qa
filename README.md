@@ -162,7 +162,7 @@ Otro aspecto importante a destacar en este ejercicio, es la forma en la que inte
 ### Ejemplo de prompt 3: Uso de commands de Github Copilot: ***@workspace***
 En este ejercicio vamos a crear un test utilizando el comando de github Copilot `@workspace` para que pueda tener el contexto de todo el proyecto, de esta forma vamos a obtener una respuesta más acertada.
  ```bash
-@workspace Teniendo en cuenta la estructura del framework, crear un test que: 1 Que navegue a la página de "https://automationteststore.com/", 2 Que realice una búsqueda del producto título “Tropiques Minerale Loose Bronzer”, 3 Que realice una validación que el producto este con Free Shipping
+@workspace Teniendo en cuenta la estructura del framework, crear un test que: 1 Que navegue a la página de "https://automationteststore.com/", 2 Que realice una búsqueda del producto título “Casual 3/4 Sleeve”, 3 Que realice una validación que el producto este con Free Shipping
  ```
 - ###  Respuesta de Copilot:
 Para crear un test en Cypress que cumpla con los requisitos mencionados, sigue estos pasos:
@@ -172,11 +172,10 @@ Para crear un test en Cypress que cumpla con los requisitos mencionados, sigue e
  ```bash
 Feature: Automation Test Store
 
-  Scenario: Add Tropiques Minerale Loose Bronzer to the shopping cart
+  Scenario: Add Casual 3/4 Sleeve to the shopping cart with Free Shipping
     Given I navigate to the Automation Test Store page
-    When I search for the product titled "Tropiques Minerale Loose Bronzer"
-    And I add the product to the shopping cart
-    Then the product should be included in the shopping cart
+    When I search for the product titled "Casual 3/4 Sleeve"
+    Then the product should be included in the shopping cart with "Free Shipping"
    ```
 3. Crear un archivo automation_test_store_steps.js en cypress/e2e/step_definitions/.
 4. Agregar el siguiente código al archivo automation_test_store_steps.js:
@@ -194,33 +193,34 @@ When('I search for the product titled {string}', (productTitle) => {
   automationTestStorePage.search(productTitle);
 });
 
-When('I add the product to the shopping cart', () => {
-  automationTestStorePage.addToCart();
-});
 
-Then('the product should be included in the shopping cart', () => {
-  automationTestStorePage.verifyProductInCart();
+Then('the product should be included in the shopping cart with {string}', (title) => {
+  automationTestStorePage.verifyProductWithFreeShipping(title);
 });
    ```
 
 5. Crear un archivo automation_test_store_page.js en cypress/page_objects/.
 6. Agregar el siguiente código al archivo automation_test_store_page.js:
  ```bash
+const selectores = {
+  inputSearch: '#filter_keyword',
+  freeShipping: '.alert'
+};
+
 class AutomationTestStorePage {
   visit() {
     cy.visit('https://automationteststore.com/');
   }
 
   search(productTitle) {
-    cy.get('input[name="search"]').type(`${productTitle}{enter}`);
+    cy.get(selectores.inputSearch).type(`${productTitle}{enter}`);
   }
 
-  addToCart() {
-    cy.get('.productcart').click();
-  }
 
-  verifyProductInCart() {
-    cy.get('.cart_total').should('contain', 'Tropiques Minerale Loose Bronzer');
+
+  verifyProductWithFreeShipping(title) {
+    cy.get(selectores.freeShipping).should('be.visible');
+    cy.get(selectores.freeShipping).should('contain', title);
   }
 }
 
@@ -232,12 +232,6 @@ export default AutomationTestStorePage;
     npm run cypress:open
     ```
 Luego selecciona el archivo automation_test_store.feature en la interfaz de Cypress para ejecutar el test.
-
-### - Correcciones a este ejemplo:
-- Elemento: `'input[name="search"]'` por `‘#filter_keyword’`
-- Elemento: `'.productcart'`  Por `'.cart'`
-- Elemento  `.cart_total` por `.product-list`
-
 
 ### Reflexiones sobre el ejercicio:
 Como podemos observar solamente tuvimos errores relacionados a elementos/selectores y es algo que muy esperable dentro del contexto de uso que le estamos dando.
