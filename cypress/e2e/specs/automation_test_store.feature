@@ -1,28 +1,18 @@
 Feature: Automation Test Store
 
-  @test_01
-  Scenario Outline: Add Tropiques Minerale Loose Bronzer to the shopping cart
+  Scenario: Add Casual 3/4 Sleeve to the shopping cart with Free Shipping
     Given I navigate to the Automation Test Store page
-    When I search for the product titled "<productTitle>"
-    And I add the product to the shopping cart
-    Then the product should be included in the shopping cart "<productTitle>"
-    Examples:
-    | productTitle                    |
-    | Tropiques Minerale Loose Bronzer|
+    When I search for the product titled "Casual 3/4 Sleeve"
+    Then the product should be included in the shopping cart with "Free Shipping"
 
-   @test_02
-   Scenario Outline: Add Total Moisture Facial Cream to the shopping cart
+    Scenario: Validate Casual 3/4 Sleeve product with Free Shipping and update quantity
     Given I navigate to the Automation Test Store page
-    When I search for the product titled "<productTitle>"
-    And I add the product to the shopping cart
-    Then the product should be included in the shopping cart "<productTitle>"
-    And I continue shopping
-  Examples:
-    | productTitle                |       
-    | Total Moisture Facial Cream |
+    When I search for the product titled "Casual 3/4 Sleeve"
+    Then the product should be included in the shopping cart with "Free Shipping"
+    When I increase the quantity to 2
+    Then the total price should be updated correctly
 
-  @test_03
-  Scenario: Validate out of stock product
+  Scenario: Validate CK IN2U EAU DE TOILETTE product is out of stock
     Given I navigate to the Automation Test Store page
-    When I search for the product titled "Acqua Di Gio Pour Homme"
+    When I search for the product titled "CK IN2U EAU DE TOILETTE"
     Then the product should be out of stock
