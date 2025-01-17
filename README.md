@@ -95,22 +95,12 @@ Con este ejercicio la idea es mejorar la calidad de respuesta obtenida por a tra
 **Código**
 1. Crear el archivo .feature: Crea un archivo google_search.feature en cypress/integration:
  ```bash
-import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
-import GooglePage from '../pages/google_page';
+Feature: Google Search
 
-const googlePage = new GooglePage();
-
-Given('I open Google page', () => {
-  googlePage.visit();
-});
-
-When('I search for {string}', (searchTerm) => {
-  googlePage.search(searchTerm);
-});
-
-Then('the title should contain {string}', (title) => {
-  googlePage.verifyTitle(title);
-});
+  Scenario: Search for Microsoft Copilot
+    Given I open Google page
+    When I search for "Microsoft Copilot | IA de Microsoft"
+    Then the title should contain "Microsoft Copilot | IA de Microsoft"
    ```
 2. Crear la clase step_definitions: Crea un archivo google_search_steps.js en cypress/integration/step_definitions:
  ```bash
