@@ -162,7 +162,10 @@ Otro aspecto importante a destacar en este ejercicio, es la forma en la que inte
 ### Ejemplo de prompt 3: Uso de commands de Github Copilot: ***@workspace***
 En este ejercicio vamos a crear un test utilizando el comando de github Copilot `@workspace` para que pueda tener el contexto de todo el proyecto, de esta forma vamos a obtener una respuesta más acertada.
  ```bash
-@workspace Teniendo en cuenta la estructura del framework, crear un test que: 1 Que navegue a la página de "https://automationteststore.com/", 2 Que realice una búsqueda del producto título “Casual 3/4 Sleeve”, 3 Que realice una validación que el producto este con Free Shipping
+@workspace Teniendo en cuenta la estructura del framework, crear un test que:
+1 Que navegue a la página de "https://automationteststore.com/",
+2 Que realice una búsqueda del producto título “Casual 3/4 Sleeve”,
+3 Que realice una validación que el producto este con Free Shipping
  ```
 - ###  Respuesta de Copilot:
 Para crear un test en Cypress que cumpla con los requisitos mencionados, sigue estos pasos:
@@ -240,7 +243,19 @@ En esta oportunidad no tuvimos que realizar la corrección de la ruta de la clas
 ### Ejemplo de prompt 4: Uso de commands de Github Copilot: ***@workspace*** - Crear mas de un test en la indicación. Reutilizar clases existentes
 Con este ejercicio vamos a crear 2 escenarios de prueba nuevamente utilizando nuevamente el comando de github Copilot `@workspace` y le vamos a indicar una instrucción extra para que mejore la forma en la que utilizamos los elementos de las clases page_objects.
   ```bash
-@workspace Teniendo en cuenta la estructura del framework, crear 2 escenarios que: Test 1: a. Que navegue a la página de https://automationteststore.com/, b. Realizar una búsqueda del producto título “Total Moisture Facial Cream”, c. Que lo agregue al carrito de compras, d. Realiza una validación que está incluido en el carrito de compras el producto, e. Y que presione el botón de seguir comprando, Test 2: a. Que navegue a la página de https://automationteststore.com/, b. Realizar una búsqueda del producto título “Acqua Di Gio Pour Homme”, c. Que valide que el producto no se encuentra en stock, d. Crear una constante en la clase page_objects que se llame selectores que contenga los elementos, e. Reutilizar las clases y archivos existentes
+@workspace Teniendo en cuenta la estructura del framework, crear 2 escenarios que:
+
+Test 1: a. Que navegue a la página de https://automationteststore.com/,
+b. Realizar una búsqueda del producto título “Casual 3/4 Sleeve”,
+c. Que realice una validación que el producto este con Free Shipping
+d. Que aumente la cantidad del productoa 2 unidades y que valide el precio,
+
+Test 2:
+a. Que navegue a la página de https://automationteststore.com/,
+b. Realizar una búsqueda del producto título “CK IN2U EAU DE TOILETTE",
+c. Que valide que el producto no se encuentra en stock,
+d. Crear una constante en la clase page_objects que se llame selectores que contenga los elementos,
+e. Reutilizar las clases y archivos existentes
    ```
 - ###  Respuesta de Copilot:
 1. Archivo de características (Feature File)
@@ -248,31 +263,21 @@ Con este ejercicio vamos a crear 2 escenarios de prueba nuevamente utilizando nu
   ```bash
 Feature: Automation Test Store
 
-  @test_01
-  Scenario Outline: Add Tropiques Minerale Loose Bronzer to the shopping cart
+  Scenario: Add Casual 3/4 Sleeve to the shopping cart with Free Shipping
     Given I navigate to the Automation Test Store page
-    When I search for the product titled "<productTitle>"
-    And I add the product to the shopping cart
-    Then the product should be included in the shopping cart "<productTitle>"
-    Examples:
-    | productTitle                    |
-    | Tropiques Minerale Loose Bronzer|
+    When I search for the product titled "Casual 3/4 Sleeve"
+    Then the product should be included in the shopping cart with "Free Shipping"
 
-   @test_02
-   Scenario Outline: Add Total Moisture Facial Cream to the shopping cart
+    Scenario: Validate Casual 3/4 Sleeve product with Free Shipping and update quantity
     Given I navigate to the Automation Test Store page
-    When I search for the product titled "<productTitle>"
-    And I add the product to the shopping cart
-    Then the product should be included in the shopping cart "<productTitle>"
-    And I continue shopping
-  Examples:
-    | productTitle                |       
-    | Total Moisture Facial Cream |
+    When I search for the product titled "Casual 3/4 Sleeve"
+    Then the product should be included in the shopping cart with "Free Shipping"
+    When I increase the quantity to 2
+    Then the total price should be updated correctly
 
-  @test_03
-  Scenario: Validate out of stock product
+  Scenario: Validate CK IN2U EAU DE TOILETTE product is out of stock
     Given I navigate to the Automation Test Store page
-    When I search for the product titled "Acqua Di Gio Pour Homme"
+    When I search for the product titled "CK IN2U EAU DE TOILETTE"
     Then the product should be out of stock
    ```
 
@@ -292,15 +297,16 @@ When('I search for the product titled {string}', (productTitle) => {
   automationTestStorePage.search(productTitle);
 });
 
-When('I add the product to the shopping cart', () => {
-  automationTestStorePage.addToCart();
+
+Then('the product should be included in the shopping cart with {string}', (title) => {
+  automationTestStorePage.verifyProductWithFreeShipping(title);
+});
+When('I increase the quantity to {int}', (quantity) => {
+  automationTestStorePage.updateQuantity(quantity);
 });
 
-Then('the product should be included in the shopping cart {string}', (productTitle) => {
-  automationTestStorePage.verifyProductInCart(productTitle);
-});
-Then('I continue shopping', () => {
-  automationTestStorePage.continueShopping();
+Then('the total price should be updated correctly', () => {
+  automationTestStorePage.verifyTotalPrice();
 });
 
 Then('the product should be out of stock', () => {
@@ -313,39 +319,40 @@ Then('the product should be out of stock', () => {
 Asegúrate de que el archivo [`cypress/page_objects/automation_test_store_page.js`] contenta los siguientes métodos:
 ```js
 const selectores = {
-   inputSearch: '#filter_keyword',
-   btnAddToCart: '.cart',
-   cartTotal: '.product-list',
-   btnContinueShopping: '.continue_shopping',
-   outOfStockMessage: '.nostock'
+  inputSearch: '#filter_keyword',
+  freeShipping: '.alert',
+  quantityInput: 'input[name="quantity"]',
+  totalPrice: '.total-price',
+  price: '.productpageprice',
+  outOfStockMessage: '.nostock'
 };
 
 class AutomationTestStorePage {
-   visit() {
-      cy.visit('https://automationteststore.com/');
-   }
+  visit() {
+    cy.visit('https://automationteststore.com/');
+  }
 
-   search(productTitle) {
-      cy.get(selectores.inputSearch).type(`${productTitle}{enter}`);
-   }
+  search(productTitle) {
+    cy.get(selectores.inputSearch).type(`${productTitle}{enter}`);
+  }
 
-   addToCart() {
-      cy.get(selectores.btnAddToCart).click();
-   }
+  verifyProductWithFreeShipping(title) {
+    cy.get(selectores.freeShipping).should('be.visible');
+    cy.get(selectores.freeShipping).should('contain', title);
+  }
+  updateQuantity(quantity) {
+    cy.get(selectores.quantityInput).clear().type(quantity);
+  }
 
-   verifyProductInCart(productTitle) {
-      cy.get(selectores.cartTotal).should('contain', productTitle);
-   }
+  verifyTotalPrice() {
+    cy.get(selectores.totalPrice).should('be.visible');
+  }
 
-   continueShopping() {
-      // cy.get(selectores.btnContinueShopping).click();
-      cy.contains('Continue Shopping').click();
-   }
+  verifyOutOfStock() {
+    cy.get(selectores.outOfStockMessage).should('be.visible');
+  }
 
-   verifyOutOfStock() {
-      cy.get(selectores.outOfStockMessage).should('be.visible');
-   }
-
+ 
 }
 
 export default AutomationTestStorePage;
